@@ -186,8 +186,6 @@ Open any file in the `frontend/` folder in a browser, or serve the folder with a
 ### Report Issue Page
 ![alt text](report.png)
 
-### Map View
-(Add screenshot)
 ## License
 
 No license has been specified yet.
