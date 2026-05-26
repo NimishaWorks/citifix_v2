@@ -1,0 +1,96 @@
+body{
+
+    background:#FFF8E1;
+
+    font-family:Arial;
+
+}
+
+.report-container{
+
+    width:600px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.1);
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    margin:10px 0;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+}
+
+button{
+
+    background:#163B65;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+.location-btn{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#22C55E;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+@media (max-width:768px){
+
+    .report-container{
+        width:92%;
+        margin:24px auto;
+        padding:24px;
+    }
+}
+
+@media (max-width:480px){
+
+    .report-container{
+        width:94%;
+        margin:16px auto;
+        padding:20px;
+    }
+
+    button,
+    .location-btn{
+        width:100%;
+    }
+}

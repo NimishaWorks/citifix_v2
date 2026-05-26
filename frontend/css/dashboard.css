@@ -1,0 +1,276 @@
+body{
+
+    font-family:Inter,sans-serif;
+
+    background:#FFF8E1;
+
+    margin:0;
+}
+
+nav{
+
+    background:#163B65;
+
+    color:white;
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.15);
+}
+
+button{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.welcome-card{
+
+    margin:40px;
+
+    padding:40px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    padding:40px;
+}
+
+.stat-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    text-align:center;
+}
+
+.stat-card h3{
+
+    color:#64748B;
+}
+
+.stat-card h1{
+
+    color:#163B65;
+
+    font-size:48px;
+
+    margin-top:15px;
+}
+.chart-container{
+
+    background:white;
+
+    margin:40px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    width:100%;
+}
+
+.chart-container h2{
+
+    margin-bottom:20px;
+
+    color:#163B65;
+}
+#statusChart{
+
+    max-width:500px;
+
+    margin:auto;
+}
+.stat-card{
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+}
+
+.quick-actions{
+
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    margin-top:30px;
+}
+
+.action-btn{
+
+    background:#163B65;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+}
+
+.action-btn:hover{
+
+    transform:translateY(-3px);
+}
+.recent-issues-section{
+
+    background:white;
+
+    margin:40px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.recent-issues-section h2{
+
+    color:#163B65;
+
+    margin-bottom:20px;
+}
+
+.issues-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+.issues-table th{
+
+    background:#163B65;
+
+    color:white;
+
+    padding:12px;
+
+    text-align:left;
+}
+
+.issues-table td{
+
+    padding:12px;
+
+    border-bottom:
+    1px solid #E5E7EB;
+}
+
+.issues-table tr:hover{
+
+    background:#F8FAFC;
+}
+
+@media (max-width:992px){
+
+    .dashboard-grid{
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        padding:24px;
+    }
+
+    .welcome-card,
+    .chart-container,
+    .recent-issues-section{
+        margin:24px;
+    }
+
+    .quick-actions{
+        flex-direction:column;
+        padding:0 24px;
+    }
+
+    .action-btn{
+        width:100%;
+    }
+
+    .issues-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+}
+
+@media (max-width:600px){
+
+    nav{
+        padding:16px 20px;
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+        padding:16px;
+    }
+
+    .welcome-card,
+    .chart-container,
+    .recent-issues-section{
+        margin:16px;
+        padding:20px;
+    }
+
+    .stat-card{
+        padding:24px;
+    }
+
+    .stat-card h1{
+        font-size:36px;
+    }
+}

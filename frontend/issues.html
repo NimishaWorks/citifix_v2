@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CitiFix Issues</title>
+
+    <link rel="stylesheet" href="css/issues.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <img
+                src="assets/logo/citifixlogo.png"
+                alt="CitiFix Logo"
+                class="logo"
+            >
+
+            <span>
+                CitiFix Issues
+            </span>
+
+
+        </div>
+
+        <button
+            class="dashboard-btn"
+            onclick="goDashboard()">
+            Dashboard
+        </button>
+
+    </nav>
+
+    <section class="page-header">
+
+        <h1>Community Issues</h1>
+
+        <p>
+            View and track civic issues reported by citizens.
+        </p>
+
+    </section>
+    <div class="filter-bar">
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="🔍 Search issues..."
+        onkeyup="searchIssues()"
+    >
+
+    <select
+        id="typeFilter"
+        onchange="filterIssues()">
+
+        <option value="">
+            All Types
+        </option>
+
+        <option value="Water">
+            Water
+        </option>
+
+        <option value="Road">
+            Road
+        </option>
+
+        <option value="Electricity">
+            Electricity
+        </option>
+
+    </select>
+
+    <select
+        id="statusFilter"
+        onchange="filterIssues()">
+
+        <option value="">
+            All Status
+        </option>
+
+        <option value="Reported">
+            Reported
+        </option>
+
+        <option value="In Progress">
+            In Progress
+        </option>
+
+        <option value="Resolved">
+            Resolved
+        </option>
+
+    </select>
+
+</div>
+    <div
+        class="issues-container"
+        id="issuesContainer">
+
+        
+
+    </div>
+    <div id="commentModal" class="modal">
+
+    <div class="modal-content">
+
+        <span
+            class="close-btn"
+            onclick="closeModal()">
+
+            &times;
+
+        </span>
+
+        <h2>Comments</h2>
+
+        <div id="commentsList">
+              
+        </div>
+         <textarea
+    id="newComment"
+    placeholder="Write a comment..."
+></textarea>
+
+<button
+    class="add-comment-btn"
+    onclick="addComment()">
+
+    Add Comment
+
+</button>
+
+    </div>
+
+</div>
+
+    <script src="js/issues.js"></script>
+
+</body>
+
+</html>

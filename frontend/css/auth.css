@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Inter,sans-serif;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #FFF8E1,
+        #FFFFFF
+    );
+}
+
+.auth-container{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+}
+
+.auth-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:80px;
+}
+
+.auth-left h1{
+
+    font-size:64px;
+
+    color:#163B65;
+
+    margin-bottom:20px;
+}
+
+.auth-left p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#64748B;
+
+    max-width:500px;
+}
+
+.auth-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.auth-card{
+
+    width:420px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.auth-card h2{
+
+    margin-bottom:25px;
+
+    color:#163B65;
+}
+
+.auth-card input{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+}
+
+.auth-card button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#FFC107;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.auth-card button:hover{
+
+    transform:translateY(-2px);
+}
+
+.bottom-text{
+
+    margin-top:20px;
+
+    text-align:center;
+}
+
+.bottom-text a{
+
+    color:#163B65;
+
+    font-weight:700;
+
+    text-decoration:none;
+}
+
+@media (max-width:768px){
+
+    .auth-container{
+        grid-template-columns:1fr;
+    }
+
+    .auth-left{
+        padding:40px 24px 20px;
+        text-align:center;
+        align-items:center;
+    }
+
+    .auth-left h1{
+        font-size:42px;
+    }
+
+    .auth-left p{
+        font-size:18px;
+        max-width:100%;
+    }
+
+    .auth-right{
+        padding:24px;
+    }
+
+    .auth-card{
+        width:100%;
+        max-width:420px;
+    }
+}
+
+@media (max-width:480px){
+
+    .auth-left{
+        padding:32px 16px 12px;
+    }
+
+    .auth-left h1{
+        font-size:34px;
+    }
+
+    .auth-card{
+        padding:28px 20px;
+    }
+}

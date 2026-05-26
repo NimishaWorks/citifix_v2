@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Report Issue - CitiFix</title>
+
+    <link rel="stylesheet" href="css/report.css">
+
+</head>
+
+<body>
+
+    <div class="report-container">
+
+        <h1>Report New Issue</h1>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Issue Title"
+        >
+
+        <textarea
+            id="description"
+            placeholder="Describe the issue"
+        ></textarea>
+
+        <select id="type">
+
+            <option>Road</option>
+            <option>Water</option>
+            <option>Electricity</option>
+            <option>Garbage</option>
+
+        </select>
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Location"
+        >
+        <button
+    type="button"
+    class="location-btn"
+    onclick="getLocation()">
+
+    📍 Use Current Location
+
+</button>
+        <input
+            type="number"
+            id="latitude"
+            placeholder="Latitude"
+        >
+
+        <input
+            type="number"
+            id="longitude"
+            placeholder="Longitude"
+        >
+
+        <input
+    type="file"
+    id="image"
+    accept="image/*"
+>
+
+        <button onclick="reportIssue()">
+            Submit Issue
+        </button>
+
+    </div>
+
+    <script src="js/report.js"></script>
+
+</body>
+
+</html>

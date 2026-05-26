@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CitiFix Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>CitiFix Dashboard</h2>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </nav>
+
+    <div class="welcome-card">
+
+        <h1 id="welcomeUser">
+            Welcome
+        </h1>
+
+        <p>
+            Manage civic issues efficiently.
+        </p>
+
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="dashboard-grid">
+
+        <div class="stat-card">
+            <h3>Total Issues</h3>
+            <h1 id="totalIssues">0</h1>
+        </div>
+
+        <div class="stat-card">
+            <h3>Reported</h3>
+            <h1 id="reportedIssues">0</h1>
+        </div>
+
+        <div class="stat-card">
+            <h3>Resolved</h3>
+            <h1 id="resolvedIssues">0</h1>
+        </div>
+
+        <div class="stat-card">
+            <h3>In Progress</h3>
+            <h1 id="inProgressIssues">0</h1>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Comments</h3>
+            <h1 id="totalComments">0</h1>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Votes</h3>
+            <h1 id="totalVotes">0</h1>
+        </div>
+
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+
+        <h2>Issue Status Overview</h2>
+
+        <canvas id="statusChart"></canvas>
+
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+
+        <button
+            class="action-btn"
+            onclick="window.location.href='report.html'">
+
+            ➕ Report Issue
+
+        </button>
+
+        <button
+            class="action-btn"
+            onclick="window.location.href='issues.html'">
+
+            📋 View Issues
+
+        </button>
+        <button
+    class="action-btn"
+    onclick="window.location.href='map.html'">
+
+    🗺 Map View
+
+</button>
+
+    </div>
+
+    <!-- Recent Issues -->
+    <!-- Recent Issues -->
+<div class="recent-issues-section">
+
+    <h2>
+        Recent Issues
+    </h2>
+
+    <table class="issues-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Title</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Location</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="recentIssuesBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
